@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Мои шпоргалки</title>
-    <link>https://div-oops.github.io/shpora/</link>
-    <description>Recent content on Мои шпоргалки</description>
+    <title>Installs on Мои шпоргалки</title>
+    <link>https://div-oops.github.io/shpora/installs/</link>
+    <description>Recent content in Installs on Мои шпоргалки</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Tue, 22 Oct 2019 11:22:52 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2019 10:47:28 +0300</lastBuildDate>
     
-	<atom:link href="https://div-oops.github.io/shpora/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://div-oops.github.io/shpora/installs/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Links</title>
-      <link>https://div-oops.github.io/shpora/sql/links/</link>
-      <pubDate>Tue, 22 Oct 2019 11:22:52 +0300</pubDate>
-      
-      <guid>https://div-oops.github.io/shpora/sql/links/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Elasticsearch</title>
@@ -30,15 +21,6 @@
 #elasticsearch.repo [elasticsearch-7.x] name=Elasticsearch repository for 7.x packages baseurl=https://artifacts.elastic.co/packages/7.x/yum gpgcheck=1 gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch enabled=1 autorefresh=1 type=rpm-md  2. Установка openjdk и elasticsearch-7.1.1
 yum install java-1.8.0-openjdk  yum install elasticsearch-7.1.1-1 systemctl daemon-reload systemctl enable elasticsearch.service  **3. Настройка системы **
 # максимальное количество файловых хендлеров echo &#39;elasticsearch - nofile 65536&#39; &amp;gt;&amp;gt; /etc/security/limits.conf # максимальное количество потоков (можно увеличить ещё, при необходимости) echo &#39;elasticsearch - proc 2048&#39; &amp;gt;&amp;gt; /etc/security/limits.conf # отключение свопа swapoff -a #добавляем виртуальной памяти echo &#39;vm.</description>
-    </item>
-    
-    <item>
-      <title>Обо мне</title>
-      <link>https://div-oops.github.io/shpora/about/</link>
-      <pubDate>Tue, 22 Oct 2019 10:39:09 +0300</pubDate>
-      
-      <guid>https://div-oops.github.io/shpora/about/</guid>
-      <description>Лучший </description>
     </item>
     
   </channel>

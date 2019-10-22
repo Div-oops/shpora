@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.55.6" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="" />
+  <meta property="og:url" content="https://div-oops.github.io/shpora/installs/elasticsearch/" />
+  <link rel="canonical" href="https://div-oops.github.io/shpora/installs/elasticsearch/" /><script type="application/ld+json">
+  {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+           "@type": "WebPage",
+           "@id": "https:\/\/div-oops.github.io\/shpora\/"
+      },
+      "articleSection" : "installs",
+      "name" : "Elasticsearch",
+      "headline" : "Elasticsearch",
+      "description" : "1. Создаем репозиторий\n#elasticsearch.repo [elasticsearch-7.x] name=Elasticsearch repository for 7.x packages baseurl=https:\/\/artifacts.elastic.co\/packages\/7.x\/yum gpgcheck=1 gpgkey=https:\/\/artifacts.elastic.co\/GPG-KEY-elasticsearch enabled=1 autorefresh=1 type=rpm-md  2. Установка openjdk и elasticsearch-7.1.1\nyum install java-1.8.0-openjdk  yum install elasticsearch-7.1.1-1 systemctl daemon-reload systemctl enable elasticsearch.service  **3. Настройка системы **\n# максимальное количество файловых хендлеров echo \x27elasticsearch - nofile 65536\x27 \x26gt;\x26gt; \/etc\/security\/limits.conf # максимальное количество потоков (можно увеличить ещё, при необходимости) echo \x27elasticsearch - proc 2048\x27 \x26gt;\x26gt; \/etc\/security\/limits.conf # отключение свопа swapoff -a #добавляем виртуальной памяти echo \x27vm.",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2019",
+      "datePublished": "2019-10-22 10:47:28 \x2b0300 MSK",
+      "dateModified" : "2019-10-22 10:47:28 \x2b0300 MSK",
+      "url" : "https:\/\/div-oops.github.io\/shpora\/installs\/elasticsearch\/",
+      "keywords" : [  ]
+  }
+</script>
+<title>Elasticsearch - Мои шпоргалки</title>
+  <meta property="og:title" content="Elasticsearch - Мои шпоргалки" />
+  <meta property="og:type" content="article" />
+  <meta name="description" content="1. Создаем репозиторий
+#elasticsearch.repo [elasticsearch-7.x] name=Elasticsearch repository for 7.x packages baseurl=https://artifacts.elastic.co/packages/7.x/yum gpgcheck=1 gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch enabled=1 autorefresh=1 type=rpm-md  2. Установка openjdk и elasticsearch-7.1.1
+yum install java-1.8.0-openjdk  yum install elasticsearch-7.1.1-1 systemctl daemon-reload systemctl enable elasticsearch.service  **3. Настройка системы **
+# максимальное количество файловых хендлеров echo &#39;elasticsearch - nofile 65536&#39; &gt;&gt; /etc/security/limits.conf # максимальное количество потоков (можно увеличить ещё, при необходимости) echo &#39;elasticsearch - proc 2048&#39; &gt;&gt; /etc/security/limits.conf # отключение свопа swapoff -a #добавляем виртуальной памяти echo &#39;vm." />
+
+  <link rel="stylesheet" href="https://unpkg.com/flexboxgrid@6.3.1/dist/flexboxgrid.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" />
+  <link rel="stylesheet" href="/shpora/css/index.css">
+  <link href="/shpora/index.xml" rel="alternate" type="application/rss+xml" title="Мои шпоргалки">
+  
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker" rel="stylesheet">
+  
+  <script>
+    
+
+    (function (undefined) { }).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
+  </script>
+
+  
+</head>
+
+<body>
+  <article class="post " id="article">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <div class="site-header">
+          
+<header>
+  <div class="signatures site-title">
+    <a href="/"></a>
+  </div>
+</header>
+<div class="row end-xs">
+  
+  
+</div>
+<div class="header-line"></div>
+
+        </div>
+        <header class="post-header">
+          <h1 class="post-title">Elasticsearch</h1>
+          
+          <div class="row post-desc">
+            <div class="col-xs-6">
+              
+              <time class="post-date" datetime="2019-10-22 10:47:28 MSK">
+                22 Oct 2019
+              </time>
+              
+            </div>
+            <div class="col-xs-6">
+              
+            </div>
+          </div>
+          
+        </header>
+
+        <div class="post-content markdown-body">
+          <p><strong>1. Создаем репозиторий</strong></p>
+
+<pre><code>#elasticsearch.repo 
+
+[elasticsearch-7.x]
+name=Elasticsearch repository for 7.x packages
+baseurl=https://artifacts.elastic.co/packages/7.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+
+</code></pre>
+
+<p><strong>2. Установка openjdk и elasticsearch-7.1.1</strong></p>
+
+<pre><code>yum install java-1.8.0-openjdk
+</code></pre>
+
+<pre><code>yum install elasticsearch-7.1.1-1
+
+systemctl daemon-reload
+
+systemctl enable elasticsearch.service
+</code></pre>
+
+<p>**3. Настройка системы **</p>
+
+<pre><code># максимальное количество файловых хендлеров
+echo 'elasticsearch  -  nofile  65536' &gt;&gt; /etc/security/limits.conf
+# максимальное количество потоков (можно увеличить ещё, при необходимости)
+echo 'elasticsearch  -  proc  2048' &gt;&gt; /etc/security/limits.conf
+
+# отключение свопа
+swapoff -a
+
+#добавляем виртуальной памяти
+echo 'vm.max_map_count=262144' &gt; /etc/sysctl.d/99-elasticsearch.conf
+
+sysctl -w vm.max_map_count=262144
+</code></pre>
+
+<p><strong>4. Редактирование конфигов</strong></p>
+
+<pre><code>#/etc/elasticsearch/jvm.options
+[...]
+-Xms2g
+-Xmx2g
+[...]
+</code></pre>
+
+<pre><code>#/etc/elasticsearch/elasticsearch.yml
+
+# ---------------------------------- Cluster -----------------------------------
+cluster.name: my-claster //elasticsearh с одинаковыми именами кластеров в одной сети объединяются в один
+# ------------------------------------ Node ------------------------------------
+node.name: node-master-1 // должно быть уникальным в пределах одного кластера
+node.master: true
+node.data: false
+# ----------------------------------- Paths ------------------------------------
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+# ----------------------------------- Memory ----------------------------------
+bootstrap.memory_lock: true
+# ---------------------------------- Network -----------------------------------
+network.host: 0.0.0.0
+http.port: 9200
+network.publish_host: hostname
+--------------------------------- Discovery ----------------------------------
+discovery.seed_hosts: [&quot;host1&quot;,&quot;host2&quot;]
+cluster.initial_master_nodes: [&quot;node-master-1&quot;]
+</code></pre>
+
+<pre><code>#/etc/sysconfig/elasticsearch:
+
+CONF_DIR=/etc/elasticsearch
+MAX_LOCKED_MEMORY=unlimited
+</code></pre>
+
+<pre><code>#/etc/security/limits.conf
+
+elasticsearch  -  nofile  65536
+elasticsearch  -  proc  2048
+elasticsearch soft memlock unlimited
+elasticsearch hard memlock unlimited
+</code></pre>
+
+<pre><code>#/usr/lib/systemd/system/elasticsearch.service:
+
+LimitMEMLOCK=infinity
+</code></pre>
+
+<p><strong>5. Скачиваем и устанавливаем плагин analysis-morphology для elasticsearch версии 7.1.1</strong></p>
+
+<pre><code>cd /tmp
+wget https://github.com/oleg-st/elasticsearch-analysis-morphology/files/3314386/analysis-morphology-7.1.1.zip
+cd /usr/share/elasticsearch/bin/
+./elasticsearch-plugin install file:///tmp/analysis-morphology-7.1.1.zip
+</code></pre>
+
+<p><strong>6. Проверяем работоспособность</strong></p>
+
+<pre><code>systemctl daemon-reload
+systemctl start elasticsearch.service
+
+# проверяем, что оно работает — должен вернуть json с информацией о сервере
+curl -XGET 'localhost:9200/?pretty'
+#проверяем хост:
+curl -X GET &quot;localhost:9200/_cat/health?v&amp;pretty&quot;
+#проверяем кластер
+curl -X GET &quot;localhost:9200/_cluster/health?pretty=true&quot;
+#проверяем индексы если они есть (после обновления индексов может не быть, особенно если менялся каталог с path.data:
+curl -X GET 'localhost:9200/_cat/indices?v'
+#информация о кластере и его узлах
+curl -XGET 'http://localhost:9200/_cluster/state?pretty'
+</code></pre>
+
+<p><strong>Secure</strong></p>
+
+<pre><code>xpack.security.enabled: true
+
+./bin/elasticsearch-setup-passwords interactive
+</code></pre>
+
+        </div>
+        
+
+        
+
+
+        
+        
+        <div style="height: 50px;"></div>
+        
+        
+
+        <div class="site-footer">
+  
+  
+</div>
+
+      </div>
+    </div>
+  </article>
+
+  <script src="/shpora/js/highlight.pack.js"></script>
+<script src="https://unpkg.com/quicklink@0.1.1/dist/quicklink.umd.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  var posts = document.getElementById('posts-list');
+  posts && quicklink({
+    el: posts,
+    priority: true,
+  });
+</script>
+
+  
+
+</body>
+
+</html>
