@@ -3,6 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://div-oops.github.io/shpora/installs/</loc>
+    <lastmod>2019-10-22T11:41:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/prometheus/</loc>
+    <lastmod>2019-10-22T11:41:17+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/</loc>
+    <lastmod>2019-10-22T11:41:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/postgres-exporter/</loc>
+    <lastmod>2019-10-22T11:41:06+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/node-exporter/</loc>
+    <lastmod>2019-10-22T11:40:55+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/logstash/</loc>
+    <lastmod>2019-10-22T11:40:45+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/kibana/</loc>
+    <lastmod>2019-10-22T11:40:29+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/grafana/</loc>
+    <lastmod>2019-10-22T11:40:17+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/filebeat/</loc>
+    <lastmod>2019-10-22T11:40:07+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/installs/elasticsearch-exporter/</loc>
+    <lastmod>2019-10-22T11:39:25+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://div-oops.github.io/shpora/sql/links/</loc>
     <lastmod>2019-10-22T11:22:52+03:00</lastmod>
   </url>
@@ -14,37 +66,18 @@
   </url>
   
   <url>
-    <loc>https://div-oops.github.io/shpora/</loc>
-    <lastmod>2019-10-22T11:22:52+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://div-oops.github.io/shpora/categories/</loc>
-    <lastmod>2019-10-22T10:47:28+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://div-oops.github.io/shpora/installs/elasticsearch/</loc>
     <lastmod>2019-10-22T10:47:28+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://div-oops.github.io/shpora/installs/</loc>
-    <lastmod>2019-10-22T10:47:28+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://div-oops.github.io/shpora/categories/%D1%83%D0%BA%D0%B0%D0%B7%D1%8B/</loc>
-    <lastmod>2019-10-22T10:47:28+03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://div-oops.github.io/shpora/about/</loc>
     <lastmod>2019-10-22T10:39:09+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://div-oops.github.io/shpora/categories/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

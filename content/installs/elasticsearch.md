@@ -1,7 +1,4 @@
 ---
-categories: [
-  "Указы",
-]
 title: "Elasticsearch"
 date: 2019-10-22T10:47:28+03:00
 draft: true

@@ -6,10 +6,91 @@
     <description>Recent content in Installs on Мои шпоргалки</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Tue, 22 Oct 2019 10:47:28 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2019 11:41:17 +0300</lastBuildDate>
     
 	<atom:link href="https://div-oops.github.io/shpora/installs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://div-oops.github.io/shpora/installs/prometheus/</link>
+      <pubDate>Tue, 22 Oct 2019 11:41:17 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/prometheus/</guid>
+      <description>Home Installers 1 Создаем пользователя
+sudo useradd --no-create-home --shell /bin/false prometheus sudo mkdir /etc/prometheus sudo mkdir /var/lib/prometheus sudo chown prometheus:prometheus /etc/prometheus sudo chown prometheus:prometheus /var/lib/prometheus  2 Скачиваем
+curl -LO https://github.com/prometheus/prometheus/releases/download/v2.12.0/prometheus-2.12.0.linux-amd64.tar.gz tar -xvf prometheus-2.12.0.linux-amd64.tar.gz mv prometheus-2.12.0.linux-amd64 prometheus-files  sudo cp prometheus-files/prometheus /usr/local/bin/ sudo cp prometheus-files/promtool /usr/local/bin/ sudo chown prometheus:prometheus /usr/local/bin/prometheus sudo chown prometheus:prometheus /usr/local/bin/promtool  sudo cp -r prometheus-files/consoles /etc/prometheus sudo cp -r prometheus-files/console_libraries /etc/prometheus sudo chown -R prometheus:prometheus /etc/prometheus/consoles sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries  sudo vi /etc/prometheus/prometheus.</description>
+    </item>
+    
+    <item>
+      <title>Postgres Exporter</title>
+      <link>https://div-oops.github.io/shpora/installs/postgres-exporter/</link>
+      <pubDate>Tue, 22 Oct 2019 11:41:06 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/postgres-exporter/</guid>
+      <description>cd /tmp curl -LO https://github.com/wrouesnel/postgres_exporter/releases/download/v0.5.1/postgres_exporter_v0.5.1_linux-amd64.tar.gz tar -xvf postgres_exporter_v0.5.1_linux-amd64.tar.gz sudo mv postgres_exporter_v0.5.1_linux-amd64/postgres_exporter /usr/local/bin/  sudo useradd -rs /bin/false postgres_exporter sudo vi /etc/systemd/system/postgres_exporter.service [Unit] Description=Postgres Exporter After=network.target [Service] User=postgres_exporter Group=postgres_exporter Type=simple ExecStart=/usr/local/bin/postgres_exporter [Install] WantedBy=multi-user.target  sudo systemctl daemon-reload sudo systemctl start postgres_exporter sudo systemctl enable postgres_exporter  </description>
+    </item>
+    
+    <item>
+      <title>Node Exporter</title>
+      <link>https://div-oops.github.io/shpora/installs/node-exporter/</link>
+      <pubDate>Tue, 22 Oct 2019 11:40:55 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/node-exporter/</guid>
+      <description> Home Installers &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- Node_exporter&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; cd /tmp curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz tar -xvf node_exporter-0.18.1.linux-amd64.tar.gz sudo mv node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin/  sudo useradd -rs /bin/false node_exporter sudo vi /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] User=node_exporter Group=node_exporter Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user.target  sudo systemctl daemon-reload sudo systemctl start node_exporter sudo systemctl enable node_exporter  </description>
+    </item>
+    
+    <item>
+      <title>Logstash</title>
+      <link>https://div-oops.github.io/shpora/installs/logstash/</link>
+      <pubDate>Tue, 22 Oct 2019 11:40:45 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/logstash/</guid>
+      <description>Home Installers Debager grok https://grokdebug.herokuapp.com/ Grok https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns
+sudo yum install logstash-7.1.1  sudo systemctl enable logstash.service  etc/logstash/conf.d/nginx_access.conf input { beats { port =&amp;gt; &amp;quot;5044&amp;quot; } } filter { grok { break_on_match =&amp;gt; false match =&amp;gt; { &amp;quot;message&amp;quot; =&amp;gt; [ &amp;quot;%{IPORHOST:[nginx_json][remote_ip]} - %{DATA:[nginx_json][user_name]} \[%{HTTPDATE:[nginx_json][access_time]}\] \&amp;quot;%{DATA:[nginx_json][request]}\&amp;quot; %{NUMBER:[nginx_json][status]} %{NUMBER:[nginx_json][body_bytes_sent]} \&amp;quot;%{DATA:[nginx_json][http_referrer]}\&amp;quot; \&amp;quot;%{DATA:[nginx_json][http_user_agent]}\&amp;quot;&amp;quot;, &amp;quot;%{IPORHOST} - %{DATA} \[%{HTTPDATE}\] \&amp;quot;%{WORD:[nginx_json][request_method]} %{DATA:[nginx_json][url]} HTTP/%{NUMBER:[nginx_json][http_version]}\&amp;quot; %{NUMBER} %{NUMBER} \&amp;quot;%{WORD}://%{DATA:[nginx_json][host]}\/%{DATA}\&amp;quot; \&amp;quot;%{DATA} \(%{DATA:[nginx_json][http_user_agent_parsed][os]} %{DATA}\) %{DATA}\) %{DATA:[nginx_json][http_user_agent_parsed][name]}\/%{DATA:[nginx_json][http_user_agent_parsed][major]}\.%{DATA:[nginx_json][http_user_agent_parsed][minor]}\.%{DATA:[nginx_json][http_user_agent_parsed][path]}\.%{DATA}&amp;quot; ] break_on_match =&amp;gt; false } remove_tag =&amp;gt; [ &amp;quot;_grokparsefailure&amp;quot; ] add_tag =&amp;gt; [ &amp;quot;nginx_access&amp;quot; ] } date { match =&amp;gt; [ &amp;quot;[nginx_json][access_time]&amp;quot; , &amp;quot;dd/MMM/YYYY:HH:mm:ss Z&amp;quot; ] } prune { whitelist_names =&amp;gt; [&amp;quot;timestamp&amp;quot;, &amp;quot;host&amp;quot;, &amp;quot;nginx_json&amp;quot;, &amp;quot;http_user_agent_parsed&amp;quot;, &amp;quot;tags&amp;quot;, &amp;quot;log&amp;quot;] } } output { elasticsearch { hosts =&amp;gt; &amp;quot;localhost:9200&amp;quot; index =&amp;gt; &amp;quot;nginx-access-%{+YYYY.</description>
+    </item>
+    
+    <item>
+      <title>Kibana</title>
+      <link>https://div-oops.github.io/shpora/installs/kibana/</link>
+      <pubDate>Tue, 22 Oct 2019 11:40:29 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/kibana/</guid>
+      <description>Home Installers 1. Установка Kibana
+cd /tmp wget https://artifacts.elastic.co/downloads/kibana/kibana-7.1.1-x86_64.rpm rpm -ivh kibana-7.1.1-x86_64.rpm  2. Настройка конфигурации Kibana
+#/etc/kibana/kibana.yml server.port: 5601 server.host: &amp;quot;localhost&amp;quot; elasticsearch.hosts: [&amp;quot;http://localhost:9200&amp;quot;]  3. Старт службы
+sudo systemctl enable kibana sudo systemctl start kibana  4. Настройка nginx
+#/etc/nginx/conf.d/kibana.conf server { listen 80; server_name elk-stack.co; auth_basic &amp;quot;Restricted Access&amp;quot;; auth_basic_user_file /etc/nginx/.kibana-user; location / { proxy_pass http://localhost:5601; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#39;upgrade&#39;; proxy_set_header Host $host; proxy_cache_bypass $http_upgrade; } }  5.</description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://div-oops.github.io/shpora/installs/grafana/</link>
+      <pubDate>Tue, 22 Oct 2019 11:40:17 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/grafana/</guid>
+      <description> Home Installers vim /etc/yum.repos.d/grafana.repo [grafana] name=grafana baseurl=https://packages.grafana.com/oss/rpm repo_gpgcheck=1 enabled=1 gpgcheck=1 gpgkey=https://packages.grafana.com/gpg.key sslverify=1 sslcacert=/etc/pki/tls/certs/ca-bundle.crt  sudo yum install grafana  sudo systemctl start grafana-server.service sudo systemctl enable grafana-server.service  Dashboard 1860 Node Exporter Full 6742 PostgreSQL Statistics 355 Postgres Overview 2322 Elasticsearch 2347 Elasticsearch Stats 3254 Elasticsearch All 3002 memory  Plagins grafana-cli plugins install grafana-piechart-panel  </description>
+    </item>
+    
+    <item>
+      <title>Filebeat</title>
+      <link>https://div-oops.github.io/shpora/installs/filebeat/</link>
+      <pubDate>Tue, 22 Oct 2019 11:40:07 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/filebeat/</guid>
+      <description>yum install filebeat  ``` vim /etc/filebeat/filebeat.yml
+#=========================== Filebeat inputs ============================= filebeat.inputs: - type: log enabled: true paths: - /var/log/nginx/doc-access.log #================================ Outputs ===================================== #&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; Elasticsearch output &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; #output.elasticsearch:
+hosts: [&amp;ldquo;elastic_server:9200&amp;rdquo;] #&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; Logstash output &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; output.logstash: hosts: [&amp;ldquo;logstash_server:5044&amp;rdquo;]</description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch Exporter</title>
+      <link>https://div-oops.github.io/shpora/installs/elasticsearch-exporter/</link>
+      <pubDate>Tue, 22 Oct 2019 11:39:25 +0300</pubDate>
+      
+      <guid>https://div-oops.github.io/shpora/installs/elasticsearch-exporter/</guid>
+      <description>wget https://github.com/justwatchcom/elasticsearch_exporter/releases/download/v1.1.0/elasticsearch_exporter-1.1.0.linux-amd64.tar.gz  cat &amp;lt;&amp;lt; EOF &amp;gt; /etc/systemd/system/elasticsearch_exporter.service [Unit] Description=Prometheus elasticsearch_exporter After=local-fs.target network-online.target network.target Wants=local-fs.target network-online.target network.target [Service] User=root Nice=10 ExecStart = /usr/local/bin/elasticsearch_exporter -es.all -es.indices -es.timeout 20s ExecStop= /usr/bin/killall elasticsearch_exporter [Install] WantedBy=default.target EOF systemctl daemon-reload systemctl enable elasticsearch_exporter.service systemctl start elasticsearch_exporter.service   - job_name: elasticsearch scrape_interval: 60s scrape_timeout: 30s metrics_path: &amp;quot;/metrics&amp;quot; static_configs: - targets: - elastic2.test.lan:9114 - elastic-log2.prod.lan:9114 labels: service: elasticsearch  </description>
+    </item>
     
     <item>
       <title>Elasticsearch</title>

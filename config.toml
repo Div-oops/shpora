@@ -1,5 +1,5 @@
 baseURL = "https://div-oops.github.io/shpora/"
 languageCode = "ru-ru"
 title = "Мои шпоргалки"
-theme = "hugo-theme-yinyang"
+theme = "kitab"
 publishDir = "docs"

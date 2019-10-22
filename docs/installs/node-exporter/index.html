@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <title>Мои шпоргалки</title>
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="generator" content="kitab theme by Darshan in Hugo 0.55.6" />
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/shpora/css/kitab.css" />
+
+  <script src="/shpora/js/myFunctions.js"></script>
+  <script src="/shpora/js/clipboard.min.js"></script>
+</head>
+
+  <body class="container" style="max-width: 1024px;">
+    <nav class="mt-2 border-bottom">
+  <div class="d-flex flex-row position-relative">
+    <a href="/shpora/"
+      ><i title="Home" class="nav-menu mr-2 mt-1 fas fa-home"></i
+    ></a>
+    <div class="position-relative">
+  <i
+    class="nav-menu hover-menu ml-2 mr-2 mt-1 fas fa-book"
+    onclick="expandMenu(this)"
+    title="Show all books"
+  ></i>
+  <div
+    class="show bg-light shadow mt-2"
+    style="position: absolute;
+      min-width: 280px;
+      max-width: 75%;
+      z-index: 1;
+      max-height: 0px;
+      overflow: hidden;"
+  >
+    <div class="p-2">
+      <strong>
+        Books
+      </strong>
+      <ul class="list-unstyled ml-1">
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/">
+            Installs
+          </a>
+          by 
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/sql/">
+            Sqls
+          </a>
+          by 
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="position-relative">
+  <i
+    class="nav-menu hover-menu ml-2 mr-2 mt-1 fas fa-bars"
+    onclick="expandMenu(this)"
+    title = "Show Chapters"
+  ></i>
+  <div
+    class="show bg-light shadow mt-2"
+    style="
+      position: absolute;
+      min-width: 280px;
+      max-width: 75%;
+      z-index: 1;
+      max-height: 0px;
+      overflow: hidden;"
+  >
+    <div class="p-2 rounded">
+      <strong class="mt-3">
+        
+        
+        Installs
+        
+      </strong>
+      <ul class="list-unstyled ml-1">
+        
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/prometheus/">Prometheus</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/postgres-exporter/">Postgres Exporter</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/node-exporter/">Node Exporter</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/logstash/">Logstash</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/kibana/">Kibana</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/grafana/">Grafana</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/filebeat/">Filebeat</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/elasticsearch-exporter/">Elasticsearch Exporter</a>
+        </li>
+        
+        <li class="hanging">
+          <a href="https://div-oops.github.io/shpora/installs/elasticsearch/">Elasticsearch</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+</nav>
+
+    <main class="mt-3" style="margin-left: 32px;">
+      
+<div class="mb-2 p-3 shadow position-relative">
+  <small
+    class="bg-white pl-1 pr-1 rounded border border-secondary"
+    style="background-color: #f3f3ef !important; position: absolute; top: -0.75em; left: 0.5em"
+  >
+    Installs
+  </small>
+  <h2>Node Exporter</h2>
+  <div class="rounded">
+    
+
+<h1 id="home-https-div-oops-github-io-mugivar-installers-https-div-oops-github-io-mugivar-installers"><a href="https://div-oops.github.io/mugivar">Home</a> <a href="https://div-oops.github.io/mugivar/installers">Installers</a></h1>
+
+<h1 id="node-exporter">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- Node_exporter&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</h1>
+
+<pre><code class="language-yml">
+cd /tmp
+curl -LO https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
+tar -xvf node_exporter-0.18.1.linux-amd64.tar.gz
+sudo mv node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin/
+</code></pre>
+
+<pre><code class="language-yml">sudo useradd -rs /bin/false node_exporter
+sudo vi /etc/systemd/system/node_exporter.service
+
+[Unit]
+Description=Node Exporter
+After=network.target
+ 
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+ 
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<pre><code class="language-yml">sudo systemctl daemon-reload
+sudo systemctl start node_exporter
+sudo systemctl enable node_exporter
+</code></pre>
+
+  </div>
+</div>
+
+    </main>
+    <div class="side-bar">
+  
+  <p class="mb-1 mt-1 text-left">
+  
+  <a
+    href="/shpora/installs/logstash/"
+    title="Logstash"
+  >
+    <i class="nav-menu fas fa-chevron-circle-right"></i>
+  </a>
+  
+</p>
+<p class="mb-1 mt-1 text-left">
+  
+  <a
+    href="/shpora/installs/postgres-exporter/"
+    title="Postgres Exporter"
+  >
+    <i class="nav-menu fas fa-chevron-circle-left"></i>
+  </a>
+  
+</p>
+
+  
+  <p class="mb-1 mt-1 text-left">
+    <i
+      class="nav-menu fas fa-chevron-circle-up"
+      title="Scroll to top"
+      onclick="scrollToTop()"
+    ></i>
+  </p>
+  <p class="mb-1 mt-1 text-left">
+    <i
+      title="Copy URL to share"
+      class="nav-menu fas fa-share-alt"
+    ></i>
+  </p>
+</div>
+
+<script>
+  function displayCopyMessage(bool) {
+    let alertMessage = "";
+    if (bool) {
+      alertMessage = "Link copied to clipboard";
+    } else {
+      alertMessage = "Link could not be copied to clipboard";
+    }
+    let copiedMessage = document.createElement("div");
+    copiedMessage.id = "copiedMessage";
+    copiedMessage.textContent = alertMessage;
+    copiedMessage.classList.add(
+      "bg-warning",
+      "shadow",
+      "d-block",
+      "text-center"
+    );
+    document.body.appendChild(copiedMessage);
+
+    setTimeout(function() {
+      copiedMessage.style.opacity = 0;
+    }, 500);
+    setTimeout(function() {
+      document.body.removeChild(copiedMessage);
+    }, 1500);
+  }
+
+  let clipboard = new ClipboardJS(".fa-share-alt", {
+    text: function() {
+      return "https:\/\/div-oops.github.io\/shpora\/installs\/node-exporter\/";
+    }
+  });
+
+  clipboard.on("success", function() {
+    displayCopyMessage(true);
+  });
+
+  clipboard.on("error", function() {
+    displayCopyMessage(false);
+  });
+</script>
+
+    <footer class="d-flex flex-row flex-wrap justify-content-between">
+  <div class="d-flex flex-column">
+    <span class="mb-1">
+      
+      &middot;
+      
+    </span>
+  </div>
+  <p class="about text-left mb-0">
+    <a href="https://github.com/darshanbaral/kitab">
+      kitab
+    </a>
+    theme by
+    <a href="https://www.darshanbaral.com/"> Darshan Baral</a>.
+  </p>
+</footer>
+
+  </body>
+</html>
